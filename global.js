@@ -8,6 +8,9 @@ const arrayOfAdTags=[
 `<a href="https://www.a2hosting.com/wordpress-hosting/managed/?aid=adflyrich&amp;bid=0ffde563" target="_top"><img src="//affiliates.a2hosting.com/accounts/default1/9u7wabf7le4/0ffde563.jpg" alt="managed wordpress hosting" title="managed wordpress hosting" width="728" height="90" /></a><img style="border:0;max-width:90vw;" src="https://affiliates.a2hosting.com/scripts/9u7waif7le4?aid=adflyrich&amp;bid=0ffde563" width="1" height="1" alt="" />`
 ,
   `<a href="https://www.a2hosting.com/joomla-hosting/?aid=adflyrich&amp;bid=1debff52" target="_top"><img src="//affiliates.a2hosting.com/accounts/default1/9u7wabf7le4/1debff52.png" alt="joomla hosting" title="joomla hosting" width="728" height="90" /></a><img style="border:0;max-width:90vw;" src="https://affiliates.a2hosting.com/scripts/9u7waif7le4?aid=adflyrich&amp;bid=1debff52" width="1" height="1" alt="" />1`
+,
+  `<a href="https://www.a2hosting.com/opencart-hosting/?aid=adflyrich&amp;bid=9262d080" target="_top"><img src="//affiliates.a2hosting.com/accounts/default1/9u7wabf7le4/9262d080.gif" alt="" title="" width="728" height="90" /></a><img style="border:0;max-width:90vw;" src="https://affiliates.a2hosting.com/scripts/9u7waif7le4?aid=adflyrich&amp;bid=9262d080" width="1" height="1" alt="" />`
+ 
 
 
   ];
