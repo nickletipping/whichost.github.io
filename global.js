@@ -18,8 +18,45 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //////
-    document.body.innerHTML+=`<a id="right-ad" href="https://www.a2hosting.com/?aid=adflyrich&amp;bid=a504f205" target="_top"><img src="//affiliates.a2hosting.com/accounts/default1/9u7wabf7le4/a504f205.jpg" alt="" title="" width="160" height="600" /></a><img style="border:0" src="https://affiliates.a2hosting.com/scripts/9u7waif7le4?aid=adflyrich&amp;bid=a504f205" width="1" height="1" alt="" />
-<a id="left-ad" href="https://www.a2hosting.com/wordpress-hosting/managed/?aid=adflyrich&amp;bid=23290c1b" target="_top"><img src="//affiliates.a2hosting.com/accounts/default1/9u7wabf7le4/23290c1b.jpg" alt="managed wordpress hosting" title="managed wordpress hosting" width="160" height="600" /></a><img style="border:0" src="https://affiliates.a2hosting.com/scripts/9u7waif7le4?aid=adflyrich&amp;bid=23290c1b" width="1" height="1" alt="" />
-  `;
+     const styles = `
+            #right-ad, #left-ad {
+                position: fixed;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 160px;
+                height: 600px;
+            }
+            #right-ad {
+                right: 0;
+            }
+            #left-ad {
+                left: 0;
+            }
+            @media (max-width: 1200px) {
+                #right-ad, #left-ad {
+                    display: none;
+                }
+            }
+        `;
+     // Append the styles to the head
+        const styleSheet = document.createElement("style");
+        styleSheet.type = "text/css";
+        styleSheet.innerText = styles;
+        document.head.appendChild(styleSheet);
+    
+const adsHtml = `
+    <a id="right-ad" href="https://www.a2hosting.com/?aid=adflyrich&amp;bid=a504f205" target="_top">
+        <img src="//affiliates.a2hosting.com/accounts/default1/9u7wabf7le4/a504f205.jpg" alt="" title="" width="160" height="600" />
+    </a>
+    <img style="border:0" src="https://affiliates.a2hosting.com/scripts/9u7waif7le4?aid=adflyrich&amp;bid=a504f205" width="1" height="1" alt="" />
+    
+    <a id="left-ad" href="https://www.a2hosting.com/wordpress-hosting/managed/?aid=adflyrich&amp;bid=23290c1b" target="_top">
+        <img src="//affiliates.a2hosting.com/accounts/default1/9u7wabf7le4/23290c1b.jpg" alt="managed wordpress hosting" title="managed wordpress hosting" width="160" height="600" />
+    </a>
+    <img style="border:0" src="https://affiliates.a2hosting.com/scripts/9u7waif7le4?aid=adflyrich&amp;bid=23290c1b" width="1" height="1" alt="" />
+`;
+
+document.body.innerHTML += adsHtml;
+
 
   });
