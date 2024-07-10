@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   anchors.forEach(anchor => {
     const href = anchor.getAttribute('href');
     if (href && href.match(/\/blog\/.*/)) {
-        anchor.style.borderBottom = '2px solid black';   
+        anchor.style.borderBottom = '2px solid #33485E';   
     }
   });
 });
