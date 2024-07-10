@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-
-
     //////
      const styles = `
             #right-ad, #left-ad {
@@ -60,3 +58,17 @@ document.body.innerHTML += adsHtml;
 
 
   });
+
+
+///
+document.addEventListener('DOMContentLoaded', () => {
+  const anchors = Array.from(document.querySelectorAll('a'));
+  
+  anchors.forEach(anchor => {
+    const href = anchor.getAttribute('href');
+    if (href && href.match(/\/blog\/.*/)) {
+        anchor.style.borderBottom = '2px solid black';   
+    }
+  });
+});
+
