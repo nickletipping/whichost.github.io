@@ -325,6 +325,43 @@ text-align:center;
          <script src="https://whichost.site/global.js"></script>
 
 
-        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    const posts = document.querySelectorAll('#posts a');
+    const postsPerPage = 25;
+    let visiblePosts = postsPerPage;
+
+    function updatePosts() {
+        posts.forEach((post, index) => {
+            if (index < visiblePosts) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+
+        const showMoreButton = document.getElementById('show-more');
+        if (visiblePosts >= posts.length) {
+            if (showMoreButton) showMoreButton.style.display = 'none';
+        } else {
+            if (!showMoreButton) {
+                const button = document.createElement('button');
+                button.id = 'show-more';
+                button.innerText = 'Show More Posts';
+                button.addEventListener('click', function() {
+                    visiblePosts += postsPerPage;
+                    updatePosts();
+                });
+                document.querySelector('#posts').appendChild(button);
+            } else {
+                showMoreButton.style.display = 'block';
+            }
+        }
+    }
+
+    updatePosts();
+});
+
+        </script>
 </body>
 </html>
