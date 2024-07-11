@@ -326,7 +326,8 @@ text-align:center;
 
 
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+          
+document.addEventListener("DOMContentLoaded", function() {
     const posts = document.querySelectorAll('#posts a');
     const postsPerPage = 25;
     let visiblePosts = postsPerPage;
@@ -348,19 +349,35 @@ text-align:center;
                 const button = document.createElement('button');
                 button.id = 'show-more';
                 button.innerText = 'Show More Posts';
+                button.style.display = 'block';
+                button.style.margin = '20px auto';
+                button.style.padding = '10px 20px';
+                button.style.backgroundColor = '#3498db';
+                button.style.color = '#fff';
+                button.style.border = 'none';
+                button.style.borderRadius = '5px';
+                button.style.cursor = 'pointer';
+                button.addEventListener('mouseover', function() {
+                    button.style.backgroundColor = '#2980b9';
+                });
+                button.addEventListener('mouseout', function() {
+                    button.style.backgroundColor = '#3498db';
+                });
                 button.addEventListener('click', function() {
                     visiblePosts += postsPerPage;
                     updatePosts();
                 });
-                document.querySelector('#posts').appendChild(button);
+                posts[visiblePosts - 1].insertAdjacentElement('afterend', button);
             } else {
                 showMoreButton.style.display = 'block';
+                posts[visiblePosts - 1].insertAdjacentElement('afterend', showMoreButton);
             }
         }
     }
 
     updatePosts();
 });
+
 
         </script>
 </body>
